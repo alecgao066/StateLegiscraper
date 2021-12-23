@@ -6,6 +6,8 @@ A text webscraping tool for U.S. state legislature websites, with options for sp
 
 Current coverage includes Nevada and Washington, with California in the design phase.
 
+View [dashboard demonstrations](https://youtu.be/nJPF-PdvedU) here.
+
 ## Mission
 
 The mission of StateLegiscraper is to make accessible text corpora of political, social, and scholarly significance that can build greater public transparency and academic knowledge about public policymaking and state-level politics. 
