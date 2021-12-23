@@ -1,6 +1,7 @@
 """
 Helper Functions for Plotly Dash Dashboard
 """
+import os
 import math
 import json
 import re
@@ -529,11 +530,13 @@ def sentiment_analysis(filter_m,save_path):
     x2, y2 = zip(*covlistsenp)
     covsensen = covsen.items()
     covsensen = sorted(covsensen)
+    if os.path.exists(save_path + 'sentiment.png'):
+        os.remove(save_path + 'sentiment.png')
     x3, y3 = zip(*covsensen)
     plt.plot(x1, y1)
     plt.plot(x2, y2)
     plt.plot(x3, y3)
     plt.legend(['Lowest', 'Highest', 'Ave'])  # label the line
-    plt.savefig(save_path + 'sentiment.png', bbox_inches='tight', pad_inches=0)
+    plt.savefig('{}.png'.format(save_path + 'sentiment'), bbox_inches='tight', pad_inches=0)
     plt.close()
 
